@@ -1,4 +1,5 @@
-print('a')
+print('yoo')
+if UseUi then
     local MacLib = { 
         Options = {}, 
         Folder = "Maclib", 
@@ -6096,3 +6097,4 @@ print('a')
     end
 
     return MacLib
+end
