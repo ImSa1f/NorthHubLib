@@ -1,3 +1,4 @@
+print('bree')
 if UseUi then task.wait()
     local MacLib = { 
         Options = {}, 
@@ -2117,7 +2118,7 @@ if UseUi then task.wait()
 
                                 local finalValue = value * multiplier
                                 local clampedValue = math.clamp(finalValue, SliderFunctions.Settings.Minimum, SliderFunctions.Settings.Maximum)
-                                SetValue(clampedValue, true) 
+                                SetValue(clampedValue, false) 
                                 sliderValue.Text = ValueDisplayMethod(clampedValue, SliderFunctions.Settings.Precision)
 
                                 if SliderFunctions.Settings.onInputComplete then
@@ -2130,8 +2131,7 @@ if UseUi then task.wait()
 
                         UserInputService.InputChanged:Connect(function(input)
                             if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-                                --SetValue(input)
-                                SetValue(tonumber(input), false)
+                                SetValue(input)
                             end
                         end)
 
