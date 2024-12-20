@@ -1,4 +1,4 @@
-print('bree')
+print('zz')
 if UseUi then task.wait()
     local MacLib = { 
         Options = {}, 
@@ -2131,7 +2131,7 @@ if UseUi then task.wait()
 
                         UserInputService.InputChanged:Connect(function(input)
                             if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-                                SetValue(input)
+                                SetValue(tonumber(input))
                             end
                         end)
 
